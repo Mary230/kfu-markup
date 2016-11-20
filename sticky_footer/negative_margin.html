@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      * {
+        margin: 0;
+      }
+      html, body {
+        height: 100%;
+      }
+      .page-wrap {
+        min-height: 100%;
+        /* equal to footer height */
+        margin-bottom: -142px; 
+      }
+      .page-wrap:after {
+        content: "";
+        display: block;
+      }
+      .site-footer, .page-wrap:after {
+        height: 142px; 
+      }
+      .site-footer {
+        background: #600;
+        color:#fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrap">Some content</div>
+    <footer class="site-footer">Footer Content</footer>
+  </body>
+</html>

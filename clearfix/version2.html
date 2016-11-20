@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clearfix</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      function turnOff() {
+        document.getElementById('example-row').className = 'row';
+        return false;
+      }
+      ;
+    </script>
+    <style>
+      .block{
+        height:200px;
+        margin:50px;
+        width:200px;
+      }
+      #b1{
+        background-color:#600;
+      }
+      #b2{
+        background-color:#060;
+      }
+      #b3{
+        background-color:#006;
+      }
+      .aligned{
+        float:left;
+      }
+      .row{
+        background-color:#ccc;
+      }
+      .clearfix {
+        zoom: 1;
+      }
+      .clearfix:before,
+      .clearfix:after {
+        content: "";
+        display: table;
+      }
+      .clearfix:after {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="javascript:turnOff();" style="background-color:#ccc;border:2px solid #333;color:#000;display:block;font-size:20px;font-weight:bold;height:30px;line-height:30px;margin:20px;text-align: center;text-decoration: none;width:200px;">
+      Turn Cleanfix Off
+    </a>
+    <div class="row clearfix" id="example-row">
+      <div class="aligned block" id="b1"></div>
+      <div class="aligned block" id="b2"></div>
+    </div>
+    <div class="block" id="b3"></div>
+  </body>
+</html>
